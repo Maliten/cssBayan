@@ -22,7 +22,7 @@ body{
   
 .accordion_label:after{    
   content:'';  
-  background-image: url('/cssBayan/img/cross.png');
+  background-image: url('../img/cross.png');
   background-size: 15px 15px;
   display: inline-block;
   width: 15px;
@@ -41,6 +41,8 @@ body{
 
 .accordion_content{
   display: none;
+  overflow: hidden;
+  max-height: 0;
 }
 
 
