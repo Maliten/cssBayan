@@ -10,7 +10,7 @@ body{
 
 .accordion_container{
   max-width: 500px;
-  margin: 20px auto;  
+  margin: 20px 10px;  
 }
 
 h1{
@@ -47,7 +47,6 @@ h1{
   transition: all .5s ease;    
 }
   
-
 .accordion_item input{
   appearance: none;
   position: absolute;
@@ -80,14 +79,14 @@ transform: rotate(45deg);
 
 
 
- @media (min-width: 820px) {
+ @media (min-width: 320px) {
 
   body{
     font-size: 16px;
   }
   .accordion_container{
     max-width: 650px;
-    margin: 40px auto; 
+    margin: 40px 20px; 
   }
   .accordion_img {    
     max-height: 300px; 
@@ -98,13 +97,13 @@ transform: rotate(45deg);
 
  }
 
-@media (min-width: 1180px) {
-  
+@media (min-width: 820px) {
+
   body{
     font-size: 20px;
   }
   
-  .accordion_container{
+  .accordion_container{   
     max-width: 800px;
     margin: 60px auto;  
   }
