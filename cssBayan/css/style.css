@@ -40,9 +40,11 @@ body{
 }
 
 .accordion_content{
-  display: none;
+  /*display: none;*/
   overflow: hidden;
   max-height: 0;
+
+  transition: max-height 1s ease-in-out;
 }
 
 
@@ -51,6 +53,7 @@ transform: rotate(45deg);
 }
  
 .accordion_input:checked ~ .accordion_content{
-    display: block;
+   /* display: block;*/
+    max-height: 500px;
  }
   
