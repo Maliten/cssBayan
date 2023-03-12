@@ -3,29 +3,31 @@
 
 body{
   background-color: #cf9549;
-
   font-family: 'Roboto', sans-serif; 
-  color: white;    
-  
-
+  font-size: 14px;
 }
+
 
 .accordion_container{
-  max-width: 800px;
-  margin: 60px auto;
+  max-width: 500px;
+  margin: 20px auto;  
 }
-  
-.accordion_item{
-  /*margin-bottom: 10px;*/
+
+h1{
+  color: white;  
 }
+
+
 
 .accordion_label {
   border-top: 1px solid  rgba(213, 236, 255, 0.2);
   position: relative;
   padding: 15px 0;
-  cursor: pointer;
+  
   display: block;    
   font-weight: bold;
+  color: black; 
+  transition: color .5s ease-out;
 }
   
 .accordion_label:after{  
@@ -41,7 +43,8 @@ body{
   position: absolute;    
   right: 15px;
 
-  transition: transform .5s ease;    
+  opacity: 0;
+  transition: all .5s ease;    
 }
   
 
@@ -58,17 +61,75 @@ body{
 
 .accordion_img {
   display: block;
-  max-height: 400px; 
-  max-width: 400px;   
-  margin: 15px auto;
-  
+  max-height: 250px; 
+  max-width: 250px;   
+  margin: 10px auto;  
 }
 
 .accordion_input:checked ~ .accordion_label:after{       
 transform: rotate(45deg);  
 }
- 
+.accordion_input:checked ~ .accordion_label{       
+  color: white; 
+  }
+
 .accordion_input:checked ~ .accordion_content{   
     max-height: 600px;
  }
+
+
+
+
+ @media (min-width: 820px) {
+
+  body{
+    font-size: 16px;
+  }
+  .accordion_container{
+    max-width: 650px;
+    margin: 40px auto; 
+  }
+  .accordion_img {    
+    max-height: 300px; 
+    max-width: 300px;   
+    margin: 15px auto;  
+  }
+
+
+ }
+
+@media (min-width: 1180px) {
+  
+  body{
+    font-size: 20px;
+  }
+  
+  .accordion_container{
+    max-width: 800px;
+    margin: 60px auto;  
+  }
+  .accordion_img {    
+    max-height: 400px; 
+    max-width: 400px;   
+    margin: 15px auto;  
+  }
+
+
+  .accordion_label, .accordion_item{
+    cursor: pointer;
+  }
+  
+  .accordion_content:hover, .accordion_label:hover + .accordion_content {
+    max-height: 600px;
+  }
+  
+  .accordion_container:hover .accordion_label:after{
+    opacity: 1;
+  }
+  .accordion_container:hover .accordion_label{  
+    color: white;
+  }
+}
+
+
   
