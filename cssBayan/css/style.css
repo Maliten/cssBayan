@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 body{
   background-color: #cf9549;
+
+  font-family: 'Roboto', sans-serif; 
+  color: white;    
+  
+
 }
 
 .accordion_container{
@@ -12,7 +20,7 @@ body{
 }
 
 .accordion_label {
-  border-top: 1px solid  rgba(0, 0, 0, 0.2);
+  border-top: 1px solid  rgba(213, 236, 255, 0.2);
   position: relative;
   padding: 15px 0;
   cursor: pointer;
@@ -20,10 +28,13 @@ body{
   font-weight: bold;
 }
   
-.accordion_label:after{    
-  content:'';  
-  background-image: url('../img/cross.png');
+.accordion_label:after{  
+  content:'';
+  /*content: "\f00d";
+  font-family: "Font Awesome";    */
+  background-image: url('../img/plus.svg');
   background-size: 15px 15px;
+  fill: brown;
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -40,18 +51,16 @@ body{
 }
 
 .accordion_content{  
-  overflow: hidden;
-  margin-bottom: 15px;  
+  overflow: hidden;    
   max-height: 0;  
   transition: max-height 1s ease-in-out;
 }
 
-
-.accordion_content img{
-  max-height: 400px; 
-  max-width: 400px;
+.accordion_img {
   display: block;
-  margin: 0 auto;
+  max-height: 400px; 
+  max-width: 400px;   
+  margin: 15px auto;
   
 }
 
