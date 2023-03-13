@@ -10,7 +10,8 @@ body{
 
 .accordion_container{
   max-width: 500px;
-  margin: 20px 10px;  
+  margin: 10px auto;  
+  padding: 10px;
 }
 
 h1{
@@ -43,7 +44,7 @@ h1{
   position: absolute;    
   right: 15px;
 
-  opacity: 0;
+  
   transition: all .5s ease;    
 }
   
@@ -61,7 +62,7 @@ h1{
 .accordion_img {
   display: block;
   max-height: 250px; 
-  max-width: 250px;   
+  max-width: 230px;   
   margin: 10px auto;  
 }
 
@@ -85,8 +86,10 @@ transform: rotate(45deg);
     font-size: 16px;
   }
   .accordion_container{
-    max-width: 650px;
-    margin: 40px 20px; 
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px;
+
   }
   .accordion_img {    
     max-height: 300px; 
@@ -121,7 +124,13 @@ transform: rotate(45deg);
   .accordion_content:hover, .accordion_label:hover + .accordion_content {
     max-height: 600px;
   }
-  
+  .accordion_label:hover:after {    
+    transform: rotate(45deg);  
+  }
+
+  .accordion_label:after{ 
+    opacity: 0;
+  }
   .accordion_container:hover .accordion_label:after{
     opacity: 1;
   }
