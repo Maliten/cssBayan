@@ -108,7 +108,7 @@ transform: rotate(45deg);
   
   .accordion_container{   
     max-width: 800px;
-    margin: 60px auto;  
+    margin: 20px auto;  
   }
   .accordion_img {    
     max-height: 400px; 
