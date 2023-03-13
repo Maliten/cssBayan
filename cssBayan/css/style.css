@@ -28,16 +28,13 @@ h1{
   display: block;    
   font-weight: bold;
   color: black; 
-  transition: color .5s ease-out;
+  transition: color .5s ease-in-out;
 }
   
 .accordion_label:after{  
-  content:'';
-  /*content: "\f00d";
-  font-family: "Font Awesome";    */
+  content:'';  
   background-image: url('../img/plus.svg');
-  background-size: 15px 15px;
-  fill: brown;
+  background-size: 15px 15px;  
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -66,12 +63,15 @@ h1{
   margin: 10px auto;  
 }
 
-.accordion_input:checked ~ .accordion_label:after{       
-transform: rotate(45deg);  
-}
 .accordion_input:checked ~ .accordion_label{       
   color: white; 
-  }
+}
+.accordion_input:checked ~ .accordion_label:after{       
+transform: rotate(45deg);  
+filter: invert(1);
+}
+
+
 
 .accordion_input:checked ~ .accordion_content{   
     max-height: 600px;
@@ -121,21 +121,23 @@ transform: rotate(45deg);
     cursor: pointer;
   }
   
-  .accordion_content:hover, .accordion_label:hover + .accordion_content {
-    max-height: 600px;
-  }
-  .accordion_label:hover:after {    
-    transform: rotate(45deg);  
-  }
-
   .accordion_label:after{ 
     opacity: 0;
+    filter: invert(1);
   }
+  
+  .accordion_label:hover:after {    
+    transform: rotate(45deg);      
+  }
+  
   .accordion_container:hover .accordion_label:after{
     opacity: 1;
   }
   .accordion_container:hover .accordion_label{  
     color: white;
+  }
+  .accordion_content:hover, .accordion_label:hover + .accordion_content {
+    max-height: 600px;
   }
 }
 
