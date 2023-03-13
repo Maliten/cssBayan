@@ -117,7 +117,7 @@ transform: rotate(45deg);
   }
 
 
-  .accordion_item{
+  .accordion_item, .accordion_label{
     cursor: pointer;
   }
   
