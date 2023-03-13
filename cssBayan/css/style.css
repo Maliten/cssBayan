@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body{
+  background-color: #cf9549;
+  font-family: 'Roboto', sans-serif; 
+  font-size: .8em;
+}
+
+
+.accordion_container{
+  max-width: 500px;
+  margin: 10px auto;  
+  padding: 10px;
+}
+
+h1{
+  color: white;  
+}
+
+
+
+.accordion_label {
+  border-top: 1px solid  rgba(213, 236, 255, 0.2);
+  position: relative;
+  padding: 15px 0;
+  
+  display: block;    
+  font-weight: bold;
+  color: black; 
+  transition: color .5s ease-in-out;
+}
+  
+.accordion_label:after{  
+  content:'';  
+  background-image: url('../img/plus.svg');
+  background-size: 15px 15px;  
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: absolute;    
+  right: 15px;
+
+  
+  transition: all .5s ease;    
+}
+  
+.accordion_item input{
+  appearance: none;
+  position: absolute;
+}
+
+.accordion_content{  
+  overflow: hidden;    
+  max-height: 0;  
+  transition: max-height 1s ease-in-out;
+}
+
+.accordion_img {
+  display: block;
+  max-height: 250px; 
+  max-width: 230px;   
+  margin: 10px auto;  
+}
+
+.accordion_input:checked ~ .accordion_label{       
+  color: white; 
+}
+.accordion_input:checked ~ .accordion_label:after{       
+transform: rotate(45deg);  
+filter: invert(1);
+}
+
+
+
+.accordion_input:checked ~ .accordion_content{   
+    max-height: 600px;
+ }
+
+
+
+
+ @media (min-width: 320px) {
+
+  body{
+    font-size: 1em;
+  }
+  .accordion_container{
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px;
+
+  }
+  .accordion_img {    
+    max-height: 300px; 
+    max-width: 300px;   
+    margin: 15px auto;  
+  }
+
+
+ }
+
+@media (min-width: 820px) {
+
+  body{
+    font-size: 1.2em;
+  }
+  
+  .accordion_container{   
+    max-width: 800px;
+    margin: 20px auto;  
+  }
+  .accordion_img {    
+    max-height: 400px; 
+    max-width: 400px;   
+    margin: 15px auto;  
+  }
+
+
+  .accordion_item, .accordion_label{
+    cursor: pointer;
+  }
+  
+  .accordion_label:after{ 
+    opacity: 0;
+    filter: invert(1);
+  }
+  
+  .accordion_label:hover:after {    
+    transform: rotate(45deg);      
+  }
+  
+  .accordion_container:hover .accordion_label:after{
+    opacity: 1;
+  }
+  .accordion_container:hover .accordion_label{  
+    color: white;
+  }
+  .accordion_content:hover, .accordion_label:hover + .accordion_content {
+    max-height: 600px;
+  }
+}
+
+
+  
